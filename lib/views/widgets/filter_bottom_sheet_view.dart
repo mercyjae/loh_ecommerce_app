@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-import '../enum/filter_criteria.dart';
-import 'filter_item.dart';
+import '../../utils/enum/filter_criteria.dart';
+import 'filter_tile.dart';
 
 class FilterBottomSheet extends StatelessWidget {
   const FilterBottomSheet({super.key});
@@ -21,9 +20,11 @@ class FilterBottomSheet extends StatelessWidget {
           ),
         ),
       ),
-      child: Column (
+      child: Column(
         children: [
-          const SizedBox(height: 12.0,) ,
+          const SizedBox(
+            height: 12.0,
+          ),
           Container(
             width: 50,
             height: 5,
@@ -34,46 +35,45 @@ class FilterBottomSheet extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 1.0,),
-          Text(
-            'Filter or Sort by',
-            // style: GoogleFonts.poppins(
-            //   color:Colors.black,
-            //   fontSize: 20,
-            //   fontWeight: FontWeight.w600,
-            // ),
+          const SizedBox(
+            height: 1.0,
           ),
-          const SizedBox(height: 29.0,),
-          FilterItem(
-              title: "Popular",
-              onTap: (){
-                Navigator.pop(context, FilterCriteria.popularity);
-              }
+          const Text(
+            'Filter by',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: Colors.black,
+            ),
           ),
-          FilterItem(
-              title: "Newest",
-              onTap: (){
-                Navigator.pop(context, FilterCriteria.newest);
-              }
+          const SizedBox(
+            height: 29.0,
           ),
-          FilterItem(
-              title: "Customer review",
-              onTap: (){
-                Navigator.pop(context, FilterCriteria.review);
-              }
-          ),
-          FilterItem(
+          FilterTile(
               title: "Price lowest",
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context, FilterCriteria.lowPrice);
-              }
-          ),
-          FilterItem(
+              }),
+          FilterTile(
               title: "Price highest",
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context, FilterCriteria.highPrice);
-              }
-          ),
+              }),
+          FilterTile(
+              title: "Popular",
+              onTap: () {
+                Navigator.pop(context, FilterCriteria.popularity);
+              }),
+          FilterTile(
+              title: "Newest",
+              onTap: () {
+                Navigator.pop(context, FilterCriteria.newest);
+              }),
+          FilterTile(
+              title: "Customer review",
+              onTap: () {
+                Navigator.pop(context, FilterCriteria.review);
+              }),
         ],
       ),
     );

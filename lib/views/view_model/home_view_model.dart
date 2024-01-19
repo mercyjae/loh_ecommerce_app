@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/product_model.dart';
-import 'package:loh_ecommerce_app/utils/softkey_focus.dart';
+
 import 'package:loh_ecommerce_app/views/view_model/base_view_model.dart';
 
-import '../../enum/filter_criteria.dart';
-import '../../enum/view_state.dart';
+import '../../utils/enum/filter_criteria.dart';
+import '../../utils/enum/view_state.dart';
 
 class HomeViewModel extends BaseViewModel {
   String errorMessage = "";
@@ -39,7 +39,8 @@ class HomeViewModel extends BaseViewModel {
 
   void closeSearchField(BuildContext context, String currentTab) {
     isSearch = false;
-    hideKeyboard(context);
+    FocusScope.of(context).requestFocus(FocusNode());
+    // hideKeyboard(context);
     clearSearch(currentTab);
     notifyListeners();
   }
@@ -52,7 +53,8 @@ class HomeViewModel extends BaseViewModel {
     }
 
     // Filter items based on the search query
-    List<ProductModel> currentTabItems = List.from(productItems[currentTab] ?? []);
+    List<ProductModel> currentTabItems =
+        List.from(productItems[currentTab] ?? []);
     List<ProductModel> filteredItems = currentTabItems
         .where((item) => item.title.toLowerCase().contains(query.toLowerCase()))
         .toList();

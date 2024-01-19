@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/product_model.dart';
 
 
-import '../chip_item.dart';
+import 'chip_item.dart';
 
-class TabChipsView extends StatelessWidget {
+class ChipView extends StatelessWidget {
   final TabController tabController;
   final int currentTab;
   final Function(int) onTabSelected;
 
-  const TabChipsView({
+  const ChipView({
     Key? key,
     required this.tabController,
     required this.currentTab,

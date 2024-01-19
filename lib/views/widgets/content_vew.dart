@@ -27,7 +27,7 @@ class TabContentScreen extends StatelessWidget {
       controller: scrollController,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisExtent: 220,
+        mainAxisExtent: 200,
         crossAxisSpacing: 8.0,
         mainAxisSpacing: 4.0,
       ),
@@ -37,30 +37,36 @@ class TabContentScreen extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Container(
-                decoration: BoxDecoration(
-                    // border: Border.all(width: 2)
-                    ),
-                height: 150,
-                width: double.infinity,
-                child: Image.asset(
-                  item.imagePath,
-                  fit: BoxFit.cover,
-                ),
+            Container(
+              // decoration: BoxDecoration(
+              //   borderRadius: BorderRadius.circular(20),
+              //   color: Colors.blue,
+              //      border: Border.all(width: 2)
+              //     ),
+              height: 150,
+              width: double.infinity,
+              child: Image.asset(
+                item.imagePath,
+                fit: BoxFit.cover,
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(item.title),
-                Text('\$200'),
+                Text(
+                  item.title,
+                  style: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '\$200',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            )
           ],
         );
       },

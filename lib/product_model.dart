@@ -1,4 +1,4 @@
-import 'package:loh_ecommerce_app/app_images.dart';
+import 'package:loh_ecommerce_app/utils/enum/app_images.dart';
 
 class ProductModel {
   final String title;

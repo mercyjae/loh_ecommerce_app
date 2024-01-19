@@ -23,7 +23,7 @@ class ChipItem extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
         margin: const EdgeInsets.all(8),
-        width: 70,
+        width: 100,
         height: 40,
         decoration: BoxDecoration(
           color: hasFocus ? Colors.blue : Colors.white,

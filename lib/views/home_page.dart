@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/product_model.dart';
-import 'package:loh_ecommerce_app/views/components/search_bar.dart';
-import 'package:loh_ecommerce_app/views/components/tab_chips_view.dart';
-import 'package:loh_ecommerce_app/views/components/content_vew.dart';
+import 'package:loh_ecommerce_app/views/widgets/search_bar.dart';
+import 'package:loh_ecommerce_app/views/widgets/chip_view.dart';
+import 'package:loh_ecommerce_app/views/widgets/content_vew.dart';
 import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
 import 'package:loh_ecommerce_app/views/view_model/base_view.dart';
 import 'package:provider/provider.dart';
 
-import 'filter_bottom_sheet_view.dart';
+import 'widgets/filter_bottom_sheet_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen>
 
           return Scaffold(
             appBar: AppBar(
-              // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+            
               title: Row(
                 children: [
                   const Padding(
@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen>
                     },
                     currentTab: currentTab,
                   ),
-                  TabChipsView(
+                  ChipView(
                     tabController: _tabController!,
                     currentTab: current,
                     onTabSelected: (index) {
