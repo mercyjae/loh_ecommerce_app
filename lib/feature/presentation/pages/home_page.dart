@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/feature/data/model/product_model.dart';
+import 'package:loh_ecommerce_app/feature/presentation/controller/home_controller.dart';
 import 'package:loh_ecommerce_app/feature/presentation/widgets/search_bar.dart';
 import 'package:loh_ecommerce_app/feature/presentation/widgets/chip_view.dart';
 import 'package:loh_ecommerce_app/feature/presentation/widgets/content_vew.dart';
-import 'package:loh_ecommerce_app/feature/presentation/controller/home_view_model.dart';
 import 'package:loh_ecommerce_app/feature/presentation/controller/base_view.dart';
 import 'package:provider/provider.dart';
 
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen>
         _scrollController.position.maxScrollExtent) {
       // Load more items
       String currentTab = productItems.keys.elementAt(current);
-      context.read<HomeViewModel>().loadMoreItems(currentTab);
+      context.read<HomeController>().loadMoreItems(currentTab);
     }
   }
 
@@ -62,14 +62,13 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<HomeViewModel>(
+    return BaseView<HomeController>(
         onModelReady: (model) {},
         builder: (context, model, child) {
           String currentTab = productItems.keys.elementAt(current);
 
           return Scaffold(
             appBar: AppBar(
-            
               title: Row(
                 children: [
                   const Padding(
@@ -113,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen>
                 children: [
                   AppSearchBar(
                     searchController: model.searchController,
-                     isVisible: model.isSearch,
+                    isVisible: model.isSearch,
                     onSearchChanged: (value) {
                       model.searchItems(value, currentTab);
                     },

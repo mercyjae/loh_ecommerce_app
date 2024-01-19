@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/core/locator/locator.dart';
 import 'package:provider/provider.dart';
 
-import 'base_view_model.dart';
+import 'base_controller.dart';
 
-class BaseView<T extends BaseViewModel> extends StatefulWidget {
+class BaseView<T extends BaseController> extends StatefulWidget {
   final Widget Function(BuildContext context, T model, Widget? child)? builder;
   final Function(T)? onModelReady;
   const BaseView({Key? key, this.builder, this.onModelReady}) : super(key: key);
@@ -13,7 +13,7 @@ class BaseView<T extends BaseViewModel> extends StatefulWidget {
   State<StatefulWidget> createState() => _BaseViewState<T>();
 }
 
-class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
+class _BaseViewState<T extends BaseController> extends State<BaseView<T>> {
   late T model;
 
   @override

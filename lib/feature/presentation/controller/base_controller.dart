@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../core/enum/view_state.dart';
 
 
-class BaseViewModel extends ChangeNotifier {
+class BaseController extends ChangeNotifier {
   ViewState _viewState = ViewState.idle;
- // NavigationService navigationService = getIt<NavigationService>();
+
   ViewState get viewState => _viewState;
 
   set viewState(ViewState newViewState){

@@ -1,5 +1,4 @@
 enum FilterCriteria {
-  title,
   popularity,
   newest,
   review,

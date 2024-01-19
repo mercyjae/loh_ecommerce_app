@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/feature/data/model/product_model.dart';
 
-import 'package:loh_ecommerce_app/feature/presentation/controller/base_view_model.dart';
+import 'package:loh_ecommerce_app/feature/presentation/controller/base_controller.dart';
 
 import '../../../core/enum/filter_criteria.dart';
 import '../../../core/enum/view_state.dart';
 
-class HomeViewModel extends BaseViewModel {
+class HomeController extends BaseController {
   String errorMessage = "";
   ViewState _state = ViewState.idle;
   FilterCriteria? currentFilterCriteria;
