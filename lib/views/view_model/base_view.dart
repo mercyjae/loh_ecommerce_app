@@ -15,7 +15,6 @@ class BaseView<T extends BaseViewModel> extends StatefulWidget {
 
 class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
   late T model;
-  // T model = getIt<T>();
 
   @override
   void initState() {

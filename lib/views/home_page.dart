@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/list_items.dart';
+import 'package:loh_ecommerce_app/product_model.dart';
 import 'package:loh_ecommerce_app/views/components/search_bar.dart';
 import 'package:loh_ecommerce_app/views/components/tab_chips_view.dart';
-import 'package:loh_ecommerce_app/views/components/tab_content_view.dart';
-import 'package:loh_ecommerce_app/views/view_model/app_view_model.dart';
+import 'package:loh_ecommerce_app/views/components/content_vew.dart';
+import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
 import 'package:loh_ecommerce_app/views/view_model/base_view.dart';
 import 'package:provider/provider.dart';
 
 import 'filter_bottom_sheet_view.dart';
 
-class AppHomePage extends StatefulWidget {
-  const AppHomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<AppHomePage> createState() => _AppHomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _AppHomePageState extends State<AppHomePage>
+class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController? _tabController;
   late ScrollController _scrollController;
@@ -28,7 +28,7 @@ class _AppHomePageState extends State<AppHomePage>
   void initState() {
     super.initState();
     _tabController = TabController(
-        initialIndex: 0, length: tabItems.keys.length, vsync: this);
+        initialIndex: 0, length: productItems.keys.length, vsync: this);
 
     _tabController?.animation?.addListener(() {
       if (!mounted) return;
@@ -48,8 +48,8 @@ class _AppHomePageState extends State<AppHomePage>
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
       // Load more items
-      String currentTab = tabItems.keys.elementAt(current);
-      context.read<AppViewModel>().loadMoreItems(currentTab);
+      String currentTab = productItems.keys.elementAt(current);
+      context.read<HomeViewModel>().loadMoreItems(currentTab);
     }
   }
 
@@ -62,10 +62,10 @@ class _AppHomePageState extends State<AppHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<AppViewModel>(
+    return BaseView<HomeViewModel>(
         onModelReady: (model) {},
         builder: (context, model, child) {
-          String currentTab = tabItems.keys.elementAt(current);
+          String currentTab = productItems.keys.elementAt(current);
 
           return Scaffold(
             appBar: AppBar(
@@ -96,7 +96,7 @@ class _AppHomePageState extends State<AppHomePage>
                       ).then((selectedFilter) {
                         if (selectedFilter != null) {
                           model.applyFilter(
-                              selectedFilter, currentTab, tabItems);
+                              selectedFilter, currentTab, productItems);
                         }
                       });
                     },
@@ -113,7 +113,7 @@ class _AppHomePageState extends State<AppHomePage>
                 children: [
                   AppSearchBar(
                     searchController: model.searchController,
-                    isVisible: model.isSearch,
+                     isVisible: model.isSearch,
                     onSearchChanged: (value) {
                       model.searchItems(value, currentTab);
                     },
@@ -138,8 +138,8 @@ class _AppHomePageState extends State<AppHomePage>
                   Expanded(
                     child: TabBarView(
                       controller: _tabController,
-                      children: tabItems.keys.map((tabName) {
-                        return TabContentView(
+                      children: productItems.keys.map((tabName) {
+                        return TabContentScreen(
                           tabName: tabName,
                           scrollController: _scrollController,
                           criteriaSelected:

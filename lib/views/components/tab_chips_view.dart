@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/list_items.dart';
+import 'package:loh_ecommerce_app/product_model.dart';
 
 
 import '../chip_item.dart';
@@ -23,11 +23,11 @@ class TabChipsView extends StatelessWidget {
       width: double.infinity,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
-        itemCount: tabItems.keys.length,
+        itemCount: productItems.keys.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (ctx, index) {
           return ChipItem(
-            title: tabItems.keys.elementAt(index),
+            title: productItems.keys.elementAt(index),
             hasFocus: currentTab == index,
             current: currentTab,
             index: index,

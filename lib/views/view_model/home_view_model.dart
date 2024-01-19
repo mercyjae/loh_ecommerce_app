@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/list_item.dart';
-import 'package:loh_ecommerce_app/list_items.dart';
+import 'package:loh_ecommerce_app/product_model.dart';
 import 'package:loh_ecommerce_app/utils/softkey_focus.dart';
 import 'package:loh_ecommerce_app/views/view_model/base_view_model.dart';
 
 import '../../enum/filter_criteria.dart';
 import '../../enum/view_state.dart';
 
-
-class AppViewModel extends BaseViewModel {
+class HomeViewModel extends BaseViewModel {
   String errorMessage = "";
   ViewState _state = ViewState.idle;
   FilterCriteria? currentFilterCriteria;
-  Map<String, List<ListItem>> filteredTabItems = {};
+  Map<String, List<ProductModel>> filteredTabItems = {};
   final searchController = TextEditingController();
   bool criteriaSelected = false;
   bool isSearch = false;
@@ -54,8 +52,8 @@ class AppViewModel extends BaseViewModel {
     }
 
     // Filter items based on the search query
-    List<ListItem> currentTabItems = List.from(tabItems[currentTab] ?? []);
-    List<ListItem> filteredItems = currentTabItems
+    List<ProductModel> currentTabItems = List.from(productItems[currentTab] ?? []);
+    List<ProductModel> filteredItems = currentTabItems
         .where((item) => item.title.toLowerCase().contains(query.toLowerCase()))
         .toList();
 
@@ -65,18 +63,18 @@ class AppViewModel extends BaseViewModel {
 
   void clearSearch(String currentTab) {
     // Reset the filtered items to show all items
-    filteredTabItems[currentTab] = List.from(tabItems[currentTab] ?? []);
+    filteredTabItems[currentTab] = List.from(productItems[currentTab] ?? []);
     searchController.clear();
     notifyListeners();
   }
 
   void applyFilter(FilterCriteria criteria, String currentTab,
-      Map<String, List<ListItem>> tabItems) {
+      Map<String, List<ProductModel>> tabItems) {
     criteriaSelected = true;
     currentFilterCriteria = criteria;
 
     // Filter or sort the items for the current tab
-    List<ListItem> currentTabItems = List.from(tabItems[currentTab] ?? []);
+    List<ProductModel> currentTabItems = List.from(tabItems[currentTab] ?? []);
 
     // Apply sorting/filtering logic based on criteria
     switch (criteria) {
@@ -139,7 +137,7 @@ class AppViewModel extends BaseViewModel {
     });
   }
 
-  Future<List<ListItem>> fetchMoreData(String currentTab) async {
+  Future<List<ProductModel>> fetchMoreData(String currentTab) async {
     // Simulate network delay
     await Future.delayed(const Duration(seconds: 2));
 
@@ -151,8 +149,8 @@ class AppViewModel extends BaseViewModel {
     int endIndex = startIndex + itemsPerPage;
 
     // Fetch items for the current page
-    List<ListItem> allItems = tabItems[currentTab] ?? [];
-    List<ListItem> fetchedItems = allItems.sublist(
+    List<ProductModel> allItems = productItems[currentTab] ?? [];
+    List<ProductModel> fetchedItems = allItems.sublist(
         startIndex, endIndex <= allItems.length ? endIndex : allItems.length);
 
     // Increment the current page number for next fetch

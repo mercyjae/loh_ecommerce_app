@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:loh_ecommerce_app/views/view_model/app_view_model.dart';
+import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
 
 
 
@@ -11,7 +11,7 @@ dependenciesInjectorSetup() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   ///View Model
-  getIt.registerFactory<AppViewModel>(() => AppViewModel());
+  getIt.registerFactory<HomeViewModel>(() => HomeViewModel());
 
   /// Services
  // getIt.registerLazySingleton<NavigationService>(() => NavigationService());
