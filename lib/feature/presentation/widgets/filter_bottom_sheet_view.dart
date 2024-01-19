@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/enum/filter_criteria.dart';
+import '../../../core/enum/filter_criteria.dart';
 import 'filter_tile.dart';
 
 class FilterBottomSheet extends StatelessWidget {

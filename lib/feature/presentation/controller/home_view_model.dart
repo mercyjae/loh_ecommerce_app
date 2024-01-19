@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/feature/model/product_model.dart';
+import 'package:loh_ecommerce_app/feature/data/model/product_model.dart';
 
-import 'package:loh_ecommerce_app/feature/controller/base_view_model.dart';
+import 'package:loh_ecommerce_app/feature/presentation/controller/base_view_model.dart';
 
-import '../../utils/enum/filter_criteria.dart';
-import '../../utils/enum/view_state.dart';
+import '../../../core/enum/filter_criteria.dart';
+import '../../../core/enum/view_state.dart';
 
 class HomeViewModel extends BaseViewModel {
   String errorMessage = "";

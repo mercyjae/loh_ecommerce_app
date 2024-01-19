@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/enum/view_state.dart';
+import '../../../core/enum/view_state.dart';
 
 
 class BaseViewModel extends ChangeNotifier {

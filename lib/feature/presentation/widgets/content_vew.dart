@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:loh_ecommerce_app/feature/model/product_model.dart';
+import 'package:loh_ecommerce_app/feature/data/model/product_model.dart';
 
 class TabContentScreen extends StatelessWidget {
   final String tabName;
