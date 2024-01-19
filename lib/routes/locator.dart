@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
+import 'package:loh_ecommerce_app/feature/controller/home_view_model.dart';
 
 
 

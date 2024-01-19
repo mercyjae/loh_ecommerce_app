@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/routes/locator.dart';
 
-import 'package:loh_ecommerce_app/views/home_page.dart';
-import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
+import 'package:loh_ecommerce_app/feature/view/home_page.dart';
+import 'package:loh_ecommerce_app/feature/controller/home_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {

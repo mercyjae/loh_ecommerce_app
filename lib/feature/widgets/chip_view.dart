@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/product_model.dart';
+import 'package:loh_ecommerce_app/feature/model/product_model.dart';
 
 
 import 'chip_item.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/product_model.dart';
+import 'package:loh_ecommerce_app/feature/model/product_model.dart';
 
-import 'package:loh_ecommerce_app/views/view_model/base_view_model.dart';
+import 'package:loh_ecommerce_app/feature/controller/base_view_model.dart';
 
 import '../../utils/enum/filter_criteria.dart';
 import '../../utils/enum/view_state.dart';

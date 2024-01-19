@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/product_model.dart';
-import 'package:loh_ecommerce_app/views/widgets/search_bar.dart';
-import 'package:loh_ecommerce_app/views/widgets/chip_view.dart';
-import 'package:loh_ecommerce_app/views/widgets/content_vew.dart';
-import 'package:loh_ecommerce_app/views/view_model/home_view_model.dart';
-import 'package:loh_ecommerce_app/views/view_model/base_view.dart';
+import 'package:loh_ecommerce_app/feature/model/product_model.dart';
+import 'package:loh_ecommerce_app/feature/widgets/search_bar.dart';
+import 'package:loh_ecommerce_app/feature/widgets/chip_view.dart';
+import 'package:loh_ecommerce_app/feature/widgets/content_vew.dart';
+import 'package:loh_ecommerce_app/feature/controller/home_view_model.dart';
+import 'package:loh_ecommerce_app/feature/controller/base_view.dart';
 import 'package:provider/provider.dart';
 
-import 'widgets/filter_bottom_sheet_view.dart';
+import '../widgets/filter_bottom_sheet_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
