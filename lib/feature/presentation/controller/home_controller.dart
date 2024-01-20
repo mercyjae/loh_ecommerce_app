@@ -95,7 +95,7 @@ class HomeController extends BaseController {
       case FilterCriteria.highPrice:
         currentTabItems.sort((a, b) => a.price.compareTo(b.price));
         break;
-      default:
+      default:    
         clearFilter();
         break;
     }

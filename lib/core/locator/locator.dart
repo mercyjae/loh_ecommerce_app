@@ -4,7 +4,9 @@ import 'package:loh_ecommerce_app/feature/presentation/controller/home_controlle
 
 GetIt getIt = GetIt.I;
 
-dependenciesInjectorSetup() async {
+
+
+setupServiceLocator() async {
   ///initialize WidgetsFlutterBinding
   WidgetsFlutterBinding.ensureInitialized();
 

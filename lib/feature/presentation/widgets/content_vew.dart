@@ -61,8 +61,8 @@ class TabContentScreen extends StatelessWidget {
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.bold),
                 ),
-                const Text(
-                  '\$200',
+                Text(
+                  '\$${item.amount}',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
               ],

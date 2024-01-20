@@ -22,7 +22,7 @@ class AppSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Visibility(
-     // visible: isVisible,
+      visible: isVisible,
       child: Row(
         children: [
           Container(
@@ -66,7 +66,11 @@ class AppSearchBar extends StatelessWidget {
               onTap: () => onCloseSearch(),
               child: const Text(
                 "Close",
-                //   style: GoogleFonts.poppins(color: Colors.red),
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
               ),
             ),
           )

@@ -69,11 +69,12 @@ class _HomeScreenState extends State<HomeScreen>
 
           return Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.purple,
               title: Row(
                 children: [
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 50),
-                    child: Text("Ecommerce App"),
+                    child: Text("E-commerce App"),
                   ),
                   const Spacer(),
                   InkWell(
@@ -124,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen>
                     },
                     currentTab: currentTab,
                   ),
+                  SizedBox(height: 5,),
                   ChipView(
                     tabController: _tabController!,
                     currentTab: current,
@@ -158,11 +160,11 @@ class _HomeScreenState extends State<HomeScreen>
                 onPressed: () {
                   model.clearFilter();
                 },
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.purple,
                 child: const Text(
                   'Clear Filter',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(fontSize: 14.0, color: Colors.white),
                 ),
               ),
             ),

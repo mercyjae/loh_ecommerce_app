@@ -1,16 +1,17 @@
 # loh_ecommerce_app
 
-A new Flutter project.
+This is a mobile app with a user-friendly e-commerce product listing page using Flutter. The app should allow users to browse through products,apply filters (e.g., popularity, ), sort products based on different criteria, and support pagination for smooth navigation through the product catalog. 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Prerequisites
+- Flutter and dart SDK 
+- VS code
+- Android Emulator or Physical Device
+- Basic knowledge of using a provider
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## DEPENDENCIES
+- provider: ^6.1.1
+- get_it: ^7.6.4
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+

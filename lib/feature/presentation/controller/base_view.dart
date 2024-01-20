@@ -22,11 +22,11 @@ class _BaseViewState<T extends BaseController> extends State<BaseView<T>> {
 
     model = getIt<T>();
 
-    if (widget.onModelReady != null) {
-      Future.delayed(Duration.zero, () {
-        widget.onModelReady!(model);
-      });
-    }
+    // if (widget.onModelReady != null) {
+    //   Future.delayed(Duration.zero, () {
+    //     widget.onModelReady!(model);
+    //   });
+    // }
   }
 
   @override

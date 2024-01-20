@@ -54,16 +54,17 @@ class FilterBottomSheet extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context, FilterCriteria.lowPrice);
               }),
+               FilterTile(
+              title: "Popular",
+              onTap: () {
+                Navigator.pop(context, FilterCriteria.popularity);
+              }),
           FilterTile(
               title: "Price highest",
               onTap: () {
                 Navigator.pop(context, FilterCriteria.highPrice);
               }),
-          FilterTile(
-              title: "Popular",
-              onTap: () {
-                Navigator.pop(context, FilterCriteria.popularity);
-              }),
+         
           FilterTile(
               title: "Newest",
               onTap: () {
