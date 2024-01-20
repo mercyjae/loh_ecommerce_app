@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/enum/filter_criteria.dart';
 import 'filter_tile.dart';
-
+ 
 class FilterBottomSheet extends StatelessWidget {
   const FilterBottomSheet({super.key});
 
@@ -36,7 +36,7 @@ class FilterBottomSheet extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 1.0,
+            height: 5.0,
           ),
           const Text(
             'Filter by',

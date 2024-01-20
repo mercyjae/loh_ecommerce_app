@@ -35,7 +35,7 @@ lib/ <br>
 |-------pages/ <br>
 |---------home_page.dart <br>
 |-------widgets/ <br>
-|--------chip_item.dart <br>>
+|--------chip_item.dart <br>
 |------- chip_view.dart <br>
 |------- content_view.dart <br>
 |------- filter_bottom_sheet.dart <br>
