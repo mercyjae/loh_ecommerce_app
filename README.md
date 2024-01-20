@@ -15,35 +15,31 @@ This is a mobile app with a user-friendly e-commerce product listing page using 
 - get_it: ^7.6.4
 ## PROJECT STRUCTURE
 lib/ <br>
-|-- main.dart <br>
 |-- core/ <br>
-|      |--enum/ <br>
-|          |-- filter_criteria.dart <br>
-|          |-- view_state.dart <br>
-|      |--locator/ <br>
-|          |-- app_locator.dart <br>
-|      |--utils/ <br>
-|          |-- app_images.dart <br>
+|--enum/ <br>
+|-- filter_criteria.dart <br>
+|-- view_state.dart <br>
+|--locator/ <br>
+|-- app_locator.dart <br>
+|--utils/ <br>
+|-- app_images.dart <br>
 |-- feature/ <br>
-|   |--data/ <br>
-|      |--model/ <br>
-|         |-- product_model.dart <br>
-|-- utils/ <br>
-|   |-- softKey_focus.dart <br>
-|   |-- app_image.dart <br>
-|-- views/components <br>
-|   |-- route_error_page.dart <br>
-|   |-- search_bar.dart <br>
-|   |-- tab_chip_view.dart <br>
-|   |-- tab_content_view.dart <br>
-|   |-- text_field.dart <br>
-|-- view_model/ <br>
-|   |-- app_view_model.dart <br>
+|--data/ <br>
+|--model/ <br>
+|-- product_model.dart <br>
+|-- controller/ <br>
+|   |-- base_controller.dart <br>
 |   |-- base_view.dart <br>
-|   |-- base_view_model.dart <br>
-|-- chip_item.dart <br>
-|-- filter_bottom_sheet.dart <br>
-|-- filter_item.dart <br>
+|   |-- home_controller.dart <br>
+|-- page/ <br>
+|   |-- home_page.dart <br>
+|-- feature <br>
+|   |-- chip_item.dart <br>>
+|   |-- chip_view.dart <br>
+|   |-- content_view.dart <br>
+|   |-- filter_bottom_sheet.dart <br>
+|   |-- filter_tile.dart <br>
+|   |-- search_bar.dart <br>
 |-- main.dart 
 
 
