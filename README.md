@@ -35,13 +35,8 @@ lib/ <br>
 |---------home_controller.dart <br>
 |-------pages/ <br>
 |---------home_page.dart <br>
-<<<<<<< HEAD
 |-------widgets/ <br>
 |--------chip_item.dart <br>
-=======
-|-------widgets/ <r>
-|--------chip_item.dart <br>>
->>>>>>> 39a76a3de0c5adf250575c3199b4c2269d1517c4
 |------- chip_view.dart <br>
 |------- content_view.dart <br>
 |------- filter_bottom_sheet.dart <br>
