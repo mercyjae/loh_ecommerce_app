@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loh_ecommerce_app/core/locator/locator.dart';
+import 'package:loh_ecommerce_app/core/locator/app_locator.dart';
 import 'package:loh_ecommerce_app/feature/presentation/controller/home_controller.dart';
 import 'package:loh_ecommerce_app/feature/presentation/pages/home_page.dart';
 import 'package:provider/provider.dart';
