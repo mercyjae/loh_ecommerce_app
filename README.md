@@ -1,6 +1,6 @@
 # loh_ecommerce_app
 
-This is a mobile app with a user-friendly e-commerce product listing page using Flutter. The app should allow users to browse through products,apply filters (e.g., popularity, ), sort products based on different criteria, and support pagination for smooth navigation through the product catalog. 
+This is a mobile app with a user-friendly e-commerce product listing page. The app should allow users to search through products,apply filters (e.g., popularity, highest price, lowest price, customer review ), sort products based on different categories(bag, eyeglasses and shoes) and support pagination for smooth navigation through the product list.
 
 
 ## Prerequisites
@@ -10,10 +10,11 @@ This is a mobile app with a user-friendly e-commerce product listing page using 
 - Basic knowledge of using a provider
 
 
-## DEPENDENCIES
+## Dependencies
 - provider: ^6.1.1
 - get_it: ^7.6.4
-## PROJECT STRUCTURE
+- 
+## Project Structure
 lib/ <br>
 |--core/ <br>
 |-----enum/ <br>
@@ -34,8 +35,13 @@ lib/ <br>
 |---------home_controller.dart <br>
 |-------pages/ <br>
 |---------home_page.dart <br>
+<<<<<<< HEAD
 |-------widgets/ <br>
 |--------chip_item.dart <br>
+=======
+|-------widgets/ <r>
+|--------chip_item.dart <br>>
+>>>>>>> 39a76a3de0c5adf250575c3199b4c2269d1517c4
 |------- chip_view.dart <br>
 |------- content_view.dart <br>
 |------- filter_bottom_sheet.dart <br>
@@ -43,5 +49,7 @@ lib/ <br>
 |------- search_bar.dart <br>
 |-- main.dart 
 
+## Video Demonstration
 
+https://github.com/mercyjae/loh_ecommerce_app/assets/83911888/91ec939e-f16c-47aa-a860-021862e7068a
 
