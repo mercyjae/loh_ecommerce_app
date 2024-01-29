@@ -49,7 +49,10 @@ class AppSearchBar extends StatelessWidget {
                     onTap: onClearQuery,
                     child: const Padding(
                       padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                      child: Icon(Icons.clear_rounded),
+                      child: Icon(
+                        Icons.clear_rounded,
+                        color: Colors.purple,
+                      ),
                     ),
                   ),
                   hintStyle: const TextStyle(

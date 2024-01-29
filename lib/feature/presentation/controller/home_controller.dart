@@ -1,36 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/feature/data/model/product_model.dart';
-
 import 'package:loh_ecommerce_app/feature/presentation/controller/base_controller.dart';
-
 import '../../../core/enum/filter_criteria.dart';
 import '../../../core/enum/view_state.dart';
 
 class HomeController extends BaseController {
-  String errorMessage = "";
   ViewState _state = ViewState.idle;
   FilterCriteria? currentFilterCriteria;
   Map<String, List<ProductModel>> filteredTabItems = {};
   final searchController = TextEditingController();
   bool criteriaSelected = false;
   bool isSearch = false;
-  // int currentPage = 1;
   bool isLoadingMore = false;
   static const int itemsPerPage = 10;
   Map<String, int> currentPage = {};
 
   @override
   ViewState get viewState => _state;
-
-  void setViewState(ViewState state) {
-    _state = state;
-    notifyListeners();
-  }
-
-  void setError(String error) {
-    errorMessage = error;
-    notifyListeners();
-  }
 
   void showSearchField() {
     isSearch = true;
@@ -95,7 +81,7 @@ class HomeController extends BaseController {
       case FilterCriteria.highPrice:
         currentTabItems.sort((a, b) => a.price.compareTo(b.price));
         break;
-      default:    
+      default:
         clearFilter();
         break;
     }
@@ -121,8 +107,8 @@ class HomeController extends BaseController {
     isLoadingMore = true;
     notifyListeners();
 
-    // Example: Fetch more items
-    // Replace this with your actual data fetching logic
+    //Fetch more items
+    
     fetchMoreData(currentTab).then((newItems) {
       if (newItems.isNotEmpty) {
         filteredTabItems[currentTab] = [

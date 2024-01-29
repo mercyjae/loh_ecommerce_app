@@ -6,8 +6,8 @@ import 'base_controller.dart';
 
 class BaseView<T extends BaseController> extends StatefulWidget {
   final Widget Function(BuildContext context, T model, Widget? child)? builder;
-  final Function(T)? onModelReady;
-  const BaseView({Key? key, this.builder, this.onModelReady}) : super(key: key);
+ 
+  const BaseView({Key? key, this.builder, }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _BaseViewState<T>();
@@ -22,11 +22,7 @@ class _BaseViewState<T extends BaseController> extends State<BaseView<T>> {
 
     model = getIt<T>();
 
-    // if (widget.onModelReady != null) {
-    //   Future.delayed(Duration.zero, () {
-    //     widget.onModelReady!(model);
-    //   });
-    // }
+    
   }
 
   @override

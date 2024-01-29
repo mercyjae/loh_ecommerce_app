@@ -13,6 +13,5 @@ setupServiceLocator() async {
   ///View Model
   getIt.registerFactory<HomeController>(() => HomeController());
 
-  /// Services
-  // getIt.registerLazySingleton<NavigationService>(() => NavigationService());
+  
 }

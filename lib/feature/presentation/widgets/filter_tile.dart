@@ -47,7 +47,7 @@ class _FilterTileState extends State<FilterTile> {
                   children: [
                     Text(
                       widget.title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         color: Colors.black,

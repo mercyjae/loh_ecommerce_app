@@ -37,12 +37,8 @@ class TabContentScreen extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              // decoration: BoxDecoration(
-              //   borderRadius: BorderRadius.circular(20),
-              //   color: Colors.blue,
-              //      border: Border.all(width: 2)
-              //     ),
+            SizedBox(
+         
               height: 150,
               width: double.infinity,
               child: Image.asset(
@@ -63,7 +59,8 @@ class TabContentScreen extends StatelessWidget {
                 ),
                 Text(
                   '\$${item.amount}',
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 15,
+                   fontWeight: FontWeight.bold),
                 ),
               ],
             ),

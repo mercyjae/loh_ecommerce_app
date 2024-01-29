@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/enum/filter_criteria.dart';
 import 'filter_tile.dart';
  

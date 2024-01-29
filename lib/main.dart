@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:loh_ecommerce_app/core/locator/app_locator.dart';
 import 'package:loh_ecommerce_app/feature/presentation/controller/home_controller.dart';
-import 'package:loh_ecommerce_app/feature/presentation/pages/home_page.dart';
+import 'package:loh_ecommerce_app/feature/presentation/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
- void main() {
+void main() {
   setupServiceLocator();
 
   runApp(ChangeNotifierProvider(
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         title: 'Flutter Demo',
-      
         debugShowCheckedModeBanner: false,
         home: HomeScreen());
   }
